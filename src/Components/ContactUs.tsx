@@ -52,18 +52,22 @@ function App() {
     <div className='grid grid-cols-1 gap-2'>
     <label>Name</label>
     <Input type="text"  {...register('name')}/>
+    {errors.name && <p className="text-red-500">{errors.name.message}</p>}
     </div>
     <div className='grid grid-cols-1 gap-2'>
     <label>Phone</label>
     <Input type="number" {...register('phone')}/>
+    {errors.phone && <p className="text-red-500">{errors.phone.message}</p>}
     </div>
     <div className='grid grid-cols-1 gap-2'>
     <label>Email</label>
     <Input type="email" {...register('email')}/>
+    {errors.email && <p className="text-red-500">{errors.email.message}</p>}
     </div>
     <div className='grid grid-cols-1 gap-2'>
     <label>Message</label>
     <Input type="text" {...register('message')}/>
+    {errors.message && <p className="text-red-500">{errors.message.message}</p>}
     </div>
     <Button type="submit" className='rounded-full mt-2'>Submit</Button>
     </form>
